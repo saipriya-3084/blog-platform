@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Blog Platform
 
-## Getting Started
+## 🚀 Overview
 
-First, run the development server:
+A full-stack blog platform built with Next.js and Supabase. It supports authentication, role-based access, and AI-generated summaries for posts using Gemini API.
+
+---
+
+## 🛠 Tech Stack
+
+* Next.js
+* Supabase (Auth + Database)
+* Google Gemini API
+* Vercel (Deployment)
+
+---
+
+## ✨ Features
+
+* User Signup & Login
+* Role-Based Access (Admin, Author, Viewer)
+* Create, Edit, Delete Posts
+* Add Comments
+* AI-generated summaries
+* Image support using URLs
+
+---
+
+## ⚙️ Setup
 
 ```bash
+git clone https://github.com/saipriya-3084/blog-platform.git
+cd blog-platform
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔑 Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
+GEMINI_API_KEY=your_key
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌍 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deployed using Vercel.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🐞 Issue Faced
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Invalid image URLs caused errors in Next.js Image component.
+Fixed by using proper direct image links (Unsplash CDN).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🔗 Live Demo
+
+(Add your deployed link here)
+
