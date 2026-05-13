@@ -21,10 +21,11 @@ export async function createPost(formData: FormData) {
   if (content && !summary) {
     try {
       const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
-      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+      const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite' });
       const prompt = `Generate a 200 word summary for the following blog content:\n\n${content}`;
       const result = await model.generateContent(prompt);
       summary = result.response.text();
+      console.log("Generated summary:", summary);
     } catch (error) {
       console.error('Failed to generate summary with Gemini:', error);
     }

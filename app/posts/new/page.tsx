@@ -16,7 +16,7 @@ export default async function NewPostPage() {
       <nav className="w-full border-b border-white/10 bg-black/50 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-6 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group hover:opacity-80 transition-opacity">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover:-translate-x-1 transition-transform"><path d="m15 18-6-6 6-6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover:-translate-x-1 transition-transform"><path d="m15 18-6-6 6-6" /></svg>
             <span className="font-semibold text-white/90">Back to Feed</span>
           </Link>
         </div>
@@ -76,6 +76,9 @@ export default async function NewPostPage() {
               placeholder="Start writing here..."
               className="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-white/90 text-lg leading-relaxed focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all placeholder:text-white/20 resize-y"
             ></textarea>
+            <p className="text-sm text-white/50 mt-2">
+              AI will automatically generate a summary for your post.
+            </p>
           </div>
 
           <div className="pt-4 flex justify-end">

@@ -30,7 +30,7 @@ export async function signup(formData: FormData) {
     password: formData.get('password') as string,
   }
 
-  const { error } = await supabase.auth.signUp(data)
+  const { data: authData, error } = await supabase.auth.signUp(data)
 
   console.log("SIGNUP ERROR:", error)
 
@@ -38,5 +38,13 @@ export async function signup(formData: FormData) {
     redirect('/signup?message=' + error.message)
   }
 
-  redirect('/login?message=Check email to continue sign in process')
+  // insert into profiles table
+  if (authData.user) {
+    await supabase.from('profiles').insert({
+      id: authData.user.id,
+      role: 'author'
+    })
+  }
+
+  redirect('/login?message=Account created successfully')
 }
